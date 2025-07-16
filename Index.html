@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS анимации -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <button id="theme-toggle">🌓</button>
+    
+    <nav>
+        <button id="menu-toggle">☰ Меню</button>
+        <div id="menu">
+            <a href="#about">Обо мне</a>
+            <a href="#hobbies">Увлечения</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </nav>
+
+    <section id="about" data-aos="fade-up">
+        <h1>Мой первый сайт</h1>
+        <img src="photo.jpg" alt="Моя фотография" loading="lazy">
+    </section>
+
+    <section id="map">
+        <h2>Где меня найти</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.123456789!2d30.123456!3d50.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA3JzI0LjQiTiAzMMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sua!4v1234567890"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <section id="feedback">
+        <h2>Обратная связь</h2>
+        <form id="myForm" action="https://formspree.io/f/ваш-id" method="POST">
+            <label>Имя:</label>
+            <input type="text" name="name" required>
+            
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            
+            <label>Сообщение:</label>
+            <textarea name="message" required></textarea>
+            
+            <button type="submit">Отправить</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <button id="topBtn" title="Наверх">↑</button>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
